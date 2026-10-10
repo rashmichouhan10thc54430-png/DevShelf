@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the best free resources for developers with DevShelf.">
+  <title>DevShelf — Your Developer Resource Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">Dev<span>Shelf.</span></a>
+    <nav>
+      <a href="#explore">Explore</a>
+      <a href="#contribute">Contribute</a>
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="pill">✦ YOUR DEVELOPER TOOLKIT</div>
+      <h1>Find your next<br><span>favorite resource.</span></h1>
+      <p>Curated tools, courses and guides to help you build amazing things. All in one shelf.</p>
+      <a href="#explore" class="primary-btn">Explore resources ↗</a>
+      <div class="hero-stats">
+        <div><strong id="resourceCount">8</strong><span>Resources</span></div>
+        <div><strong>4</strong><span>Categories</span></div>
+        <div><strong>100%</strong><span>For learners</span></div>
+      </div>
+    </section>
+
+    <section id="explore" class="section">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>Explore the shelf<span>.</span></h2></div>
+        <p>Handpicked resources to level up your skills.</p>
+      </div>
+
+      <input id="searchInput" class="search" type="search" placeholder="⌕  Search resources, tools, skills..." aria-label="Search resources">
+
+      <div id="filters" class="filters">
+        <button class="filter active" data-category="All">All resources</button>
+        <button class="filter" data-category="Web Development">Web Development</button>
+        <button class="filter" data-category="App Development">App Development</button>
+        <button class="filter" data-category="AI & ML">AI &amp; ML</button>
+        <button class="filter" data-category="Tools">Tools</button>
+      </div>
+
+      <div id="resourceGrid" class="resource-grid"></div>
+      <p id="emptyMessage" class="empty hidden">No resources found. Try another search!</p>
+    </section>
+
+    <section id="contribute" class="section contribute">
+      <div>
+        <p class="eyebrow">GROW THE COMMUNITY</p>
+        <h2>Know something useful?<br><span>Put it on the shelf.</span></h2>
+        <p>Share a resource that helped you learn. Your discovery could help another developer.</p>
+      </div>
+      <form id="resourceForm">
+        <label for="resourceName">Resource name</label>
+        <input id="resourceName" required maxlength="70" placeholder="e.g. JavaScript.info">
+        <label for="resourceUrl">Resource URL</label>
+        <input id="resourceUrl" type="url" required placeholder="https://example.com">
+        <label for="resourceCategory">Category</label>
+        <select id="resourceCategory" required>
+          <option value="Web Development">Web Development</option>
+          <option value="App Development">App Development</option>
+          <option value="AI & ML">AI &amp; ML</option>
+          <option value="Tools">Tools</option>
+        </select>
+        <label for="resourceDescription">Short description</label>
+        <textarea id="resourceDescription" required maxlength="180" placeholder="What makes this resource useful?"></textarea>
+        <button class="primary-btn" type="submit">Add to DevShelf +</button>
+        <p id="formMessage" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">Dev<span>Shelf.</span></a>
+    <p>Made for curious minds and future builders. ✦</p>
+    <p>© 2026 DevShelf</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
